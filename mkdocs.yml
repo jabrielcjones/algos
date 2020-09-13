@@ -1,0 +1,7 @@
+site_name: Algos
+
+nav:
+  - Home: algorithms.md
+  - Bibliography: bibliography.md
+
+theme: material
