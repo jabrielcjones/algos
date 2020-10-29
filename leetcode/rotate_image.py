@@ -69,7 +69,7 @@ def _get_edges(matrix, corners):
 
     edges['A'] = edge_A
 
-    # Edge B - upper_left to upper_right
+    # Edge B - lower_right to upper_right
     edge_B = []
     start = corners['lower_right_index'][0]
     end = corners['upper_right_index'][0]
@@ -93,7 +93,7 @@ def _get_edges(matrix, corners):
 
     edges['C'] = edge_C
 
-    # Edge D - lower_left to upper_right
+    # Edge D - lower_left to upper_left
     edge_D = []
     start = corners['lower_left_index'][0]
     end = corners['upper_left_index'][0]
@@ -169,10 +169,6 @@ def _shift_edges(matrix, corners, terminal_flag):
     odd_matrix = True
     if len(matrix) % 2 == 0:
         odd_matrix = False
-
-    center = []
-    center.append(int(len(matrix)/2))
-    center.append(int(len(matrix)/2))
 
     if odd_matrix:
         for item in corners.values():
